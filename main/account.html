@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunarSpy</title>
+    <style>
+        body {
+            background-color: #010d1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background-color: #141414;
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h3 {
+            color: white;
+            margin: 0 0 20px;
+        }
+        .input-group {
+            position: relative;
+            margin: 10px 0;
+            width: 100%;
+        }
+        .input-group input {
+            background-color: #1e1e1e;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px 40px;
+            padding-right: 0px;
+            width: calc(100% - 46px);
+            color: white;
+        }
+        .input-group img {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #1e1e1e;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            width: 48%;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #1a1a1a;
+        }
+        .icon-row {
+            margin-top: 20px;
+        }
+        .icon-row img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .icon-row img:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h3>Login</h3>
+        
+        <div class="input-group">
+            <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/user.png" alt="#">
+            <input type="text" placeholder="Username">
+        </div>
+        
+        <div class="input-group">
+            <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/lock.png" alt="#">
+            <input type="password" placeholder="Password">
+        </div>
+
+        <div class="button-container">
+            <button class="button" id="loginBtn">Login</button>
+            <button class="button" id="guestBtn">Guest</button>
+        </div>
+
+        <p style="margin-top: 20px; color: white;">Continue with or sign up:</p>
+        <div class="icon-row">
+            <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/facebook.png" alt="#" onclick="redirectTo('https://facebook.com')">
+            <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/instagram.png" alt="#" onclick="redirectTo('https://instagram.com')">
+            <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/twitter.png" alt="#" onclick="redirectTo('https://twitter.com')">
+            <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/tiktok.png" alt="#" onclick="redirectTo('https://tiktok.com')">
+            <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/discord.png" alt="#" onclick="redirectTo('https://discord.com')">
+        </div>
+    </div>
+
+    <script>
+        const hardCodedCredentials = {
+            username: 'LunarDev',
+            password: 'Administrator'
+        };
+
+        document.getElementById('loginBtn').onclick = function() {
+            const username = document.querySelector('input[placeholder="Username"]').value;
+            const password = document.querySelector('input[placeholder="Password"]').value;
+
+            if (username === hardCodedCredentials.username && password === hardCodedCredentials.password) {
+
+                window.location.href = 'https://sinfulzen.github.io/LunarSpy/main/home.html';
+            } else {
+                alert('Invalid credentials, please try again.');
+            }
+        };
+
+        document.getElementById('guestBtn').onclick = function() {
+
+            window.location.href = 'https://sinfulzen.github.io/LunarSpy/main/home.html';
+        };
+
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

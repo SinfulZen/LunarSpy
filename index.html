@@ -121,13 +121,13 @@
 
     <div id="rotating-text">Setting up, please wait...</div>
 
-    <div class="rounded-bar">1.0.0 Debug</div>
+    <div class="rounded-bar">1.0.15 Testing</div>
   </div>
 
   <script>
 
     const rotatingText = document.getElementById('rotating-text');
-    const textArray = ["Connecting to servers...", "Connecting to LunarAI...", "You're all set!"];
+    const textArray = ["Connecting to LunarDev servers...", "Connecting to LunarAI...", "You're all set!"];
     let textIndex = 0;
 
     function changeText() {
@@ -137,13 +137,13 @@
       if (textIndex === 0) {
         setTimeout(() => {
           window.location.href = "main/home.html";
-        }, 3000);
+        }, 1000);
       } else {
-        setTimeout(changeText, 3000);
+        setTimeout(changeText, 1000);
       }
     }
 
-    setTimeout(changeText, 3000);
+    setTimeout(changeText, 1000);
   </script>
 </body>
 </html>

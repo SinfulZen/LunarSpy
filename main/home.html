@@ -55,17 +55,26 @@
       margin-bottom: 20px;
     }
 
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
     .button {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 20px;
+      padding: 10px;
       background-color: #1e1e1e;
-      border-radius: 25px;
-      margin-bottom: 15px;
+      border-radius: 15px;
       cursor: pointer;
       border: 2px solid white;
       font-size: 16px;
+      text-align: center;
     }
 
     .button img {
@@ -85,6 +94,7 @@
       border-radius: 20px;
       padding: 20px;
       width: 90%;
+      height: 125px;
       max-width: 400px;
       box-sizing: border-box;
       z-index: 1000;
@@ -126,14 +136,16 @@
     .dropdown {
       display: none;
       position: absolute;
-      top: 55px;
-      right: 15px;
+      top: 65px;
+      right: 6px;
       background-color: #141414;
       border: 2px solid white;
       border-radius: 20px;
       padding: 10px;
-      width: 180px;
+      width: auto;
+      max-width: 150px;
       z-index: 10;
+      box-sizing: border-box;
     }
 
     .dropdown-option {
@@ -142,6 +154,7 @@
       padding: 10px;
       border-radius: 15px;
       cursor: pointer;
+      transition: border 0.3s ease, background-color 0.3s ease;
     }
 
     .dropdown-option img {
@@ -151,6 +164,7 @@
 
     .dropdown-option:hover {
       background-color: #1e1e1e;
+      border: 2px solid white;
     }
 
     ::-webkit-scrollbar {
@@ -175,62 +189,53 @@
     <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/menu.png" alt="#" id="right-icon">
   </div>
 
-  <h3>Supported platforms</h3>
+  <h3>Supported Platforms</h3>
   <p>Choose a social media platform below and start gathering info!</p>
 
-  <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/facebook.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/facebook.png" alt="#">
-    Facebook
-  </div>
+  <div class="button-container">
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/facebook.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/facebook.png" alt="#"> Facebook
+    </div>
 
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/instagram.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/instagram.png" alt="#">
-    Instagram
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/threads.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/threads.png" alt="#">
-    Threads
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/telegram.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/telegram.png" alt="#">
-    Telegram
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/whatsapp.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/whatsapp.png" alt="#">
-    WhatsApp
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/tiktok.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/tiktok.png" alt="#">
-    TikTok
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/snapchat.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/snapchat.png" alt="#">
-    SnapChat
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/twitter.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/twitter.png" alt="#">
-    Twitter
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/discord.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/discord.png" alt="#">
-    Discord
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/youtube.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/youtube.png" alt="#">
-    YouTube
-  </div>
-    
-      <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/twitch.html'">
-    <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/twitch.png" alt="#">
-    Twitch
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/instagram.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/instagram.png" alt="#"> Instagram
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/threads.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/threads.png" alt="#"> Threads
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/telegram.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/telegram.png" alt="#"> Telegram
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/whatsapp.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/whatsapp.png" alt="#"> WhatsApp
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/tiktok.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/tiktok.png" alt="#"> TikTok
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/snapchat.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/snapchat.png" alt="#"> SnapChat
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/twitter.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/twitter.png" alt="#"> Twitter
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/discord.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/discord.png" alt="#"> Discord
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/youtube.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/youtube.png" alt="#"> YouTube
+    </div>
+
+    <div class="button" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms/twitch.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/twitch.png" alt="#"> Twitch
+    </div>
   </div>
 
   <div class="popup" id="popup">
@@ -245,49 +250,39 @@
 
   <div class="dropdown" id="dropdown">
     <div class="dropdown-option" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/home.html'">
-      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/home.png" alt="#">
-      Home
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/home.png" alt="#"> Home
     </div>
     <div class="dropdown-option" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/info.html'">
-      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/info.png" alt="#">
-      Info
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/info.png" alt="#"> Info
     </div>
     <div class="dropdown-option" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/platforms.html'">
-      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/platforms.png" alt="#">
-      Platforms
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/platforms.png" alt="#"> Platforms
     </div>
-          <div class="dropdown-option" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/search.html'">
-      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/search.png" alt="#">
-      Search
+    <div class="dropdown-option" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/search.html'">
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/search.png" alt="#"> Search
     </div>
     <div class="dropdown-option" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/account.html'">
-      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/account.png" alt="#">
-      Account
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/account.png" alt="#"> Account
     </div>
     <div class="dropdown-option" onclick="window.location.href='https://sinfulzen.github.io/LunarSpy/main/settings.html'">
-      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/settings.png" alt="#">
-      Settings
+      <img src="https://sinfulzen.github.io/LunarSpy/assets/icons/settings.png" alt="#"> Settings
     </div>
   </div>
 
   <script>
-
-    document.getElementById('left-icon').onclick = function() {
-      window.location.href = "https://sinfulzen.github.io/LunarSpy/main/account.html";
-    };
-
-    document.getElementById('center-icon').onclick = function() {
-      document.getElementById('popup').style.display = 'block';
-    };
-
-    document.getElementById('close-popup').onclick = function() {
-      document.getElementById('popup').style.display = 'none';
-    };
-
-    document.getElementById('right-icon').onclick = function() {
-      const dropdown = document.getElementById('dropdown');
+    document.getElementById('right-icon').addEventListener('click', function () {
+      var dropdown = document.getElementById('dropdown');
       dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    };
+    });
+
+    document.getElementById('close-popup').addEventListener('click', function () {
+      document.getElementById('popup').style.display = 'none';
+    });
+
+    document.getElementById('center-icon').addEventListener('click', function () {
+      var popup = document.getElementById('popup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    });
   </script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunarSpy</title>
+    <style>
+        body {
+            background-color: #010d1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #141414;
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h3 {
+            color: white;
+            margin: 0 0 10px;
+        }
+        p {
+            color: white;
+            margin: 0 0 20px;
+        }
+        .button {
+            background-color: #1e1e1e;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            width: 45%;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #1a1a1a;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Incomplete</h3>
+        <p>Sorry but We're still under construction, please come back soon!</p>
+        <div class="button-container">
+            <button class="button" onclick="redirectTo('https://sinfulzen.github.io/LunarSpy/main/home.html')">Home Page</button>
+            <button class="button" onclick="redirectTo('https://github.com/SinfulZen/LunarSpy)">GitHub Repo</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
